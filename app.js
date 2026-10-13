@@ -15,7 +15,7 @@ function draw(t,L,W){
  $('plan').innerHTML=rect(L,W,'#fff','#123024')+rect(needL,needW,'#f3e2e0',t.fits?'#ba9290':'#b83600','7 5')+rect(fieldL,fieldW,'#123024','#3d9e66')+`<text x="405" y="36" text-anchor="middle" fill="#123024" font-size="17">${d.roomLength}: ${fmt(L/100)} m</text><text transform="translate(28 245) rotate(-90)" text-anchor="middle" fill="#123024" font-size="17">${d.roomWidth}: ${fmt(W/100)} m</text><text x="405" y="242" text-anchor="middle" fill="white" font-size="17">${t.length} × ${t.width} cm</text><text x="405" y="265" text-anchor="middle" fill="white" font-size="12">${d.field}</text>`;
  $('plan').setAttribute('aria-label',d.plan);
  $('selection').textContent=`${d.current}: ${typeName(t)} · ${name(t)} · ${t.rotated?d.rotated:d.straight}`;
- $('detail').innerHTML=`<strong>${t.standard?d.fits:t.fits?d.fitsShort:d.noFit}</strong><p>${d.ideal}: ${t.idealLength} × ${t.idealWidth} cm (${d.cue} ${C.tables[t.id].cue} cm).<br>${t.fits?`${d.withCue} ${t.cue} cm: ${fmt(t.neededLength)} × ${fmt(t.neededWidth)} cm.<br>${d.extra}: ${fmt((L-needL)/2)} cm ${d.along}, ${fmt((W-needW)/2)} cm ${d.across}.`:`${d.maxCue}: ${Math.max(0,t.maxCue)} cm. ${d.check}`}.</p>`;
+ $('detail').innerHTML=`<strong>${t.standard?d.fits:t.fits?d.fitsShort:d.noFit}</strong><p>${d.ideal}: ${t.idealLength} × ${t.idealWidth} cm (${d.cue} ${C.tables[t.id].cue} cm).<br>${t.fits?`${d.withCue} ${t.cue} cm: ${fmt(t.neededLength)} × ${fmt(t.neededWidth)} cm.<br>${d.extra}: ${fmt((L-needL)/2)} cm ${d.along}, ${fmt((W-needW)/2)} cm ${d.across}.`:`${d.maxCue}: ${Math.max(0,t.maxCue)} cm. ${d.check}`}</p>`;
 }
 function render(){
  if(!computed)return;
