@@ -2,7 +2,7 @@
 (function(root){
 'use strict';
 const rows=[
-['CARAMBOLE',200,100,'antiek formaat',490,390,140]
+['CARAMBOLE',200,100,'antiek formaat',490,390,140],
 ['CARAMBOLE',210,105,'klein biljart in Vlaanderen',500,395,140],
 ['CARAMBOLE',230,115,'klein biljart in NL en Wallonië',520,405,140],
 ['CARAMBOLE',255,127,'halve match (voornl. FR)',545,417,140],
